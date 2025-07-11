@@ -1,4 +1,3 @@
-
 pipeline {
     agent {
         lable 'slave2'
