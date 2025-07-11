@@ -3,7 +3,7 @@ pipeline {
         label 'slave2'
     }
     environment {
-        TODAYS_DAY = 'thursday'
+        TODAYS_DAY = 'wedneday'
     }
     stages {
         stage('bulidstage') {
