@@ -2,18 +2,14 @@ pipeline {
     agent {
         label 'slave2'
     }
-    environment {
-        TODAYS_DAY = 'wedneday'
-    }
     stages {
-        stage('bulidstage') {
+        stage('expressionstage') {
             when {
-                environment name: 'TODAYS_DAY', value: 'thursday'
+                expression { BRANCH_NAME ==~ /(prod/test)}
             }
             steps {
-                echo "pipeline for when stage"
+                echo "this from expression condition"
             }
         }
     }
 }
-//fnf
