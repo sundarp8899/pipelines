@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        lable 'slave2'
+        label 'slave2'
     }
     environment {
         TODAYS_DAY = 'thursday'
